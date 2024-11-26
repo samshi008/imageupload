@@ -18,7 +18,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
 
-app.post('/api/upload-image', upload.single(), async (req, res) => {
+app.post('/api/upload-image', upload.single('file'), async (req, res) => {
   const file = req.file;
 
   if (!file) {
