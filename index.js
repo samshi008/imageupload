@@ -134,7 +134,7 @@ app.post('/api/upload-image', upload.single('file'), (req, res) => {
 
   // Check if file is uploaded
   if (!file) {
-    return res.status(400).json({ message: 'No file uploaded.' });
+    return res.status(500).json({ message: 'No file found' });
   }
 
   // Respond with the file's path or success message
