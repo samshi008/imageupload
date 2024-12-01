@@ -138,7 +138,7 @@ app.post('/api/upload-image', upload.single('file'), (req, res) => {
   }
 
   // Respond with the file's path or success message
-  const filePath = `https://imageupload-s259.onrender.com/uploads/${file.filename}`;
+  const filePath = `https://imageupload-rev1.onrender.com/uploads/${file.filename}`;
   res.status(200).json({
     message: 'File uploaded successfully!',
     filePath: filePath // this will be used to access the file from the front end
