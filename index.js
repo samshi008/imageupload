@@ -40,7 +40,7 @@ app.post('/api/upload-image', upload.single('file'), (req, res) => {
   const file = req.file;
 
   if (!file) {
-    return res.status(400).json({ message: 'No file uploaded.' });
+    return res.status(500).json({ message: 'No file found' });
   }
   if (!validateFileType(file)) {
     return res.status(400).json({ message: 'Unsupported file type.' });
